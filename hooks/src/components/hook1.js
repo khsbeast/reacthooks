@@ -2,10 +2,13 @@ import React,{useState} from 'react'
 
 const Hook1 = () =>{
     const [count,setcount] = useState(0);
+    const changecount = () => {
+        setcount(prevcount => prevcount+1)
+    }
     return (
         <div>
             {count}
-            <button onClick={() => setcount(count+1)}>click me</button>
+            <button onClick={changecount}>click me</button>
         </div>
     )
 }
